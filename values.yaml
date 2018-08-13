@@ -53,16 +53,6 @@ global:
       enabled: true
 
 #################################
-## Nginx configuration
-#################################
-nginx:
-  # IP address the nginx ingress should bind to
-  loadBalancerIP:
-
-  # Used to restrict IPs which can reach the nginx ingress
-  loadBalancerSourceRanges:
-
-#################################
 ## Astronomer configuration
 #################################
 astronomer:
@@ -77,3 +67,28 @@ astronomer:
 
   registry:
     resources: {}
+
+#################################
+## Nginx configuration
+#################################
+nginx:
+  resources: {}
+
+  # IP address the nginx ingress should bind to
+  loadBalancerIP:
+
+  # Used to restrict IPs which can reach the nginx ingress
+  loadBalancerSourceRanges:
+
+
+#################################
+## Grafana configuration
+#################################
+grafana:
+  resources: {}
+
+#################################
+## Prometheus configuration
+#################################
+prometheus:
+  resources: {}
