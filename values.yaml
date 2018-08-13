@@ -63,39 +63,17 @@ nginx:
   loadBalancerSourceRanges:
 
 #################################
-## Airflow configuration
-#################################
-airflow:
-  # Worker settings
-  workers:
-    # Enable persistence to keep logs around between deploys
-    persistence:
-      enabled: true
-      size: 10Gi
-      # If using a custom storageClass, pass name ref to all statefulSets here
-      storageClassName:
-  prometheus:
-    persistence:
-      enabled: true
-      size: 50Gi
-      # If using a custom storageClass, pass name ref to all statefulSets here
-      storageClassName:
-
-#################################
 ## Astronomer configuration
 #################################
 astronomer:
+  orbit:
+    resources: {}
+
+  houston:
+    resources: {}
+
+  commander:
+    resources: {}
+
   registry:
-    # Enable persistence to keep registry data between deploys
-    persistence:
-      enabled: true
-      size: 50Gi
-      # If using a custom storageClass, pass name ref to all statefulSets here
-      storageClassName:
-  auth:
-    local:
-      enabled: true
-    google:
-      enabled: false
-      clientId: ~
-      clientSecret: ~
+    resources: {}
