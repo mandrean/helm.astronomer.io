@@ -102,6 +102,8 @@ spec:
               value: "50051"
             - name: GOOGLE_CLIENT_ID
               value: {{ .Values.auth.google.clientId }}
+            - name: AUTH0_CUSTOM
+            - value: {{ ne .Values.auth.auth0.baseDomain "astronomerio.auth0.com" | quote }}
             - name: AUTH0_CLIENT_ID
               value: {{ .Values.auth.auth0.clientId }}
             - name: AUTH0_BASE_DOMAIN
