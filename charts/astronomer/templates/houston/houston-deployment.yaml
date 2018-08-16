@@ -110,8 +110,10 @@ spec:
               value: {{ .Values.auth.auth0.baseDomain }}
             - name: AUTH0_EXTERNAL_AUTH
               value: {{ .Values.auth.auth0.externalLogin | quote }}
-            - name: ORBIT_BASE_URL
+            - name: BASE_URL_ORBIT
               value: "https://app.{{ .Values.global.baseDomain }}"
+            - name: BASE_URL_HOUSTON
+              value: "https://houston.{{ .Values.global.baseDomain }}"
             - name: REGISTRY_CERT_PATH
               value: "/etc/houston/tls/"
             - name: REGISTRY_ISSUER
