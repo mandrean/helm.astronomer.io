@@ -22,6 +22,9 @@ images:
   bootstrapper:
     name: astronomerinc/ap-db-bootstrapper
     tag: 0.4.1
+  install:
+    name: astronomerio/nginx-install-cli
+    tag: 0.0.3
 
 # Astronomer platform config
 data:
@@ -98,9 +101,19 @@ registry:
     service: "docker-registry"
     issuer: "houston"
 
+install:
+  resources: {}
+  #  limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  #  requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
 ports:
   houstonHTTP: 8870
   commanderHTTP: 8880
   commanderGRPC: 50051
   orbitHTTP: 8080
   registryHTTP: 5000
+  installHTTP: 80

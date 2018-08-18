@@ -32,6 +32,10 @@
 {{ .Values.images.bootstrapper.name }}:{{ or .Values.global.imageTag .Values.images.bootstrapper.tag }}
 {{- end }}
 
+{{ define "install_image" -}}
+{{ .Values.images.install.name }}:{{ or .Values.global.imageTag .Values.images.install.tag }}
+{{- end }}
+
 {{ define "registry_docker_config" -}}
   {{- $domain := printf "registry.%v" .Values.global.baseDomain }}
   {{- $email := printf "admin@%v" .Values.global.baseDomain }}
