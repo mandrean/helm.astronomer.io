@@ -32,7 +32,7 @@
 {{ .Values.images.bootstrapper.name }}:{{ or .Values.global.imageTag .Values.images.bootstrapper.tag }}
 {{- end }}
 
-{{ define "install_image" -}}
+{{ define "cli_install_image" -}}
 {{ .Values.images.install.name }}:{{ or .Values.global.imageTag .Values.images.install.tag }}
 {{- end }}
 

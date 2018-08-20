@@ -21,4 +21,4 @@ spec:
     - port: {{ .Values.ports.installHTTP }}
       targetPort: {{ .Values.ports.installHTTP }}
       protocol: TCP
-      name: cli-install-http
+      name: install-http
