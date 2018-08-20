@@ -56,6 +56,6 @@ spec:
       paths:
         - path: /
           backend:
-            serviceName: {{ .Release.Name }}-install
-            servicePort: install-http
+            serviceName: {{ .Release.Name }}-cli-install
+            servicePort: cli-install-http
 {{- end }}
