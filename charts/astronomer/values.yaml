@@ -19,12 +19,12 @@ images:
   orbit:
     name: astronomerinc/ap-orbit-ui
     tag: 0.4.1
-  bootstrapper:
+  dbBootstrapper:
     name: astronomerinc/ap-db-bootstrapper
     tag: 0.4.1
-  install:
-    name: astronomerio/nginx-install-cli
-    tag: 0.0.3
+  cliInstall:
+    name: astronomerinc/ap-cli-install
+    tag: 0.4.1
 
 # Astronomer platform config
 data:
